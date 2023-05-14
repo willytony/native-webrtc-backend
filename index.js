@@ -5,7 +5,7 @@ const io = require("socket.io")(server, {
   cors: { origin: "*", methods: ["GET", "POST"] },
 });
 
-const port = "https://videochat-qesc.onrender.com" || 8000;
+const port = 8000;
 server.listen(port, () => console.log(`server is running on port ${port}`));
 const rooms = {};
 
