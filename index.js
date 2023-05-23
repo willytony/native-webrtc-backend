@@ -2,10 +2,13 @@ const express = require("express");
 const app = express();
 const server = require("http").createServer(app);
 const io = require("socket.io")(server, {
-  cors: { origin: "*", methods: ["GET", "POST"] },
+  cors: {
+    origin: "https://videochat-qesc.onrender.com",
+    methods: ["GET", "POST"],
+  },
 });
 
-const port = "https://videochat-qesc.onrender.com/";
+const port = 8000;
 server.listen(port, () => console.log(`server is running on port ${port}`));
 const rooms = {};
 
